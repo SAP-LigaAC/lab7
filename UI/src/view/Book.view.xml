@@ -1,0 +1,34 @@
+<mvc:View controllerName="flight.bookings.ui.controller.Book"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page id="idBookPage" title="{i18n>bookPageTitle}" titleAlignment="Center" floatingFooter="true" busyIndicatorDelay="0" showNavButton="true" navButtonPress="onNavHomePress">
+        <content>
+            <f:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsXL="1" columnsL="1" columnsM="1" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="1" emptySpanXL="3" emptySpanL="3" emptySpanM="3" emptySpanS="1">
+                <f:content>
+                    <core:Title text="{i18n>bookingSectionTitle}"/>
+                    <Label text="{i18n>flightDateLabel}"/>
+                    <DateTimePicker required="true" displayFormat="short" value="{newBookingModel>/booking/flightDate}" minDate="{newBookingModel>/minFlightDate}"/>
+                    <Label text="{i18n>flightDestinationLabel}"/>
+                    <Input required="true" value="{newBookingModel>/booking/flightDestination}"/>
+                    <core:Title text="{i18n>passengerSectionTitle}"/>
+                    <Label text="{i18n>firstNameLabel}"/>
+                    <Input required="true" value="{newBookingModel>/booking/firstName}"/>
+                    <Label text="{i18n>lastNameLabel}"/>
+                    <Input required="true" value="{newBookingModel>/booking/lastName}"/>
+                    <Label text="{i18n>emailAddressLabel}"/>
+                    <Input required="true" value="{newBookingModel>/booking/emailAddress}" valueState="{valueStateModel>/emailError}"/>
+                    <Label text="{i18n>phoneNumberLabel}"/>
+                    <Input required="true" type="Number" value="{newBookingModel>/booking/phoneNumber}" valueState="{valueStateModel>/phoneError}"/>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="{i18n>bookButton}" type="Emphasized" press="onPressBook"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

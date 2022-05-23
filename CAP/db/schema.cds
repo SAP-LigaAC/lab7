@@ -1,13 +1,15 @@
 namespace sap.ui.bookings;
 
-using {managed} from '@sap/cds/common';
+using {
+  managed,
+  cuid
+} from '@sap/cds/common';
 
-entity Bookings : managed {
-  key ID                : UUID @(Core.Computed : true);
-      flightDate        : Date;
-      flightDestination : String;
-      firstName         : String;
-      lastName          : String;
-      emailAddress      : String;
-      phoneNumber       : String;
+entity Bookings : cuid, managed {
+  flightDate        : String;
+  flightDestination : String;
+  firstName         : String;
+  lastName          : String not null;
+  emailAddress      : String;
+  phoneNumber       : String;
 }
