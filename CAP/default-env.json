@@ -1,0 +1,24 @@
+{
+  "VCAP_SERVICES": {
+    "hana": [
+      {
+        "name": "project-db",
+        "tags": [
+          "hana"
+        ],
+        "credentials": {
+          "host": "f72f08a1-e3d7-405e-983c-b5744b66fcb8.hana.trial-us10.hanacloud.ondemand.com",
+          "port": "443",
+          "driver": "com.sap.db.jdbc.Driver",
+          "url": "jdbc:sap://f72f08a1-e3d7-405e-983c-b5744b66fcb8.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=06DD16AF00F146C5B9D3AA5B56729389",
+          "schema": "06DD16AF00F146C5B9D3AA5B56729389",
+          "hdi_user": "06DD16AF00F146C5B9D3AA5B56729389_CB7B4M2S165EP1LR5CYBU400G_DT",
+          "hdi_password": "Zq6MMA-XCuI25nZ8CFk12lhwZTbHVtQYupMH8xiHNAckG28bcJXinh_mMBkGKZh4fbUXCfXCL.zIZFHg0_u625xLcovgOSPHXU5jp9huiaNIMFQwTNXbBlqZj699tL33",
+          "user": "06DD16AF00F146C5B9D3AA5B56729389_CB7B4M2S165EP1LR5CYBU400G_RT",
+          "password": "Tj0lbwkMkFuC0_ZycbFet0jAHjF98OD2SxzvgosJISHQyefU8F4ltrGMfOhRmU0DmnK10DT8l_pUBQ-_f5C4oJPvqQfTh.ju2tG_YRHF2pOGjYCT4V2.r5OHO7oxupk0",
+          "certificate": "-----BEGIN CERTIFICATE-----\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\n-----END CERTIFICATE-----"
+        }
+      }
+    ]
+  }
+}

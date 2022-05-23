@@ -1,0 +1,6 @@
+applications:
+ - name: darius-bookings-CAP
+   host: darius-bookings-CAP
+   memory: 256M
+   services:
+    - project-db

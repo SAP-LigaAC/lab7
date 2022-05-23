@@ -2,26 +2,11 @@ const cds = require("@sap/cds");
 
 module.exports = cds.service.impl((srv) => {
   srv.before("CREATE", "Bookings", async (req) => {
-    console.log(req.data);
-  });
-
-  srv.on("CREATE", "Bookings", async (req) => {
-    console.log(req.data);
-  });
-
-  srv.on("UPDATE", "Bookings", async (req) => {
-    console.log(req.data);
-  });
-
-  srv.on("UPDATE", "Bookings", async (req) => {
-    console.log(req.data);
-  });
-
-  srv.on("DELETE", "Bookings", async (req) => {
-    console.log(req.data);
-  });
-
-  srv.on("DELETE", "Bookings", async (req) => {
-    console.log(req.data);
+    const matchingEmail = String(req.data.emailAddress)
+      .toLowerCase()
+      .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    if (!matchingEmail) {
+      throw new Error("Invalid email!");
+    }
   });
 });

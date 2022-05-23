@@ -1,0 +1,4 @@
+ID;createdAt;createdBy;flightDate;flightDestination;firstName;lastName;emailAddress;phoneNumber
+20466922-7d57-4e76-b14c-e53fd97dcb11;2019-10-24;Darius Birescu;2019-10-24;Rome;Norbert;Terry;darius.birescu@sap.com;0712345678
+20466922-7d57-4e76-b14c-e53fd97dcb12;2019-10-24;Darius Birescu;2019-10-24;Milano;Michael;David;darius.birescu@sap.com;0712345678
+20466922-7d57-4e76-b14c-e53fd97dcb13;2019-10-24;Darius Birescu;2019-10-24;London;John;Ronaldo;darius.birescu@sap.com;0712345678

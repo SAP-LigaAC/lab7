@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SAP_UI_BOOKINGS_BOOKINGS",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sap.ui.bookings.Bookings.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ";"
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "ID",
+          "CREATEDAT",
+          "CREATEDBY",
+          "FLIGHTDATE",
+          "FLIGHTDESTINATION",
+          "FIRSTNAME",
+          "LASTNAME",
+          "EMAILADDRESS",
+          "PHONENUMBER"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "ID": "ID",
+        "CREATEDAT": "createdAt",
+        "CREATEDBY": "createdBy",
+        "FLIGHTDATE": "flightDate",
+        "FLIGHTDESTINATION": "flightDestination",
+        "FIRSTNAME": "firstName",
+        "LASTNAME": "lastName",
+        "EMAILADDRESS": "emailAddress",
+        "PHONENUMBER": "phoneNumber"
+      }
+    }
+  ]
+}
