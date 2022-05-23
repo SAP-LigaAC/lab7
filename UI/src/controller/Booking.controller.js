@@ -90,7 +90,7 @@ sap.ui.define([
 
             if (this.validateBooking(dataToBeSent)) {
                 oBookingPage.setBusy(true);
-                this.put(`http://localhost:4004/bookings/Bookings${this.sBookingId}`, dataToBeSent)
+                this.put(`http://localhost:4004/bookings/Bookings/${this.sBookingId}`, dataToBeSent)
                     .then(() => {
                         this.onCancelEditPress();
                     })
