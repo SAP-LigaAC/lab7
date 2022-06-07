@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
     "@sap/cds": "^5",
     "@sap/hana-client": "^2.12.25",
     "@sap/hdi-deploy": "^4.3.3",
