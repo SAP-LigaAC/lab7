@@ -15,7 +15,7 @@ sap.ui.define([
 			const oBookingsPage = this.byId("idBookingsPage");
 			oBookingsPage.setBusy(true);
 
-			this.read("http://localhost:4004/bookings/Bookings")
+			this.read("https://darius-bookings-CAP.cfapps.us10.hana.ondemand.com/bookings/Bookings")
 				.then(oResponse => {
 					this.oBookingsModel.setProperty("/bookings", oResponse.value);
 				})

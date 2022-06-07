@@ -43,7 +43,7 @@ sap.ui.define([
                 oNewBooking.flightDate = new Date(oNewBooking.flightDate).toISOString();
                 oBookPage.setBusy(true);
 
-                this.post(`http://localhost:4004/bookings/Bookings`, oNewBooking)
+                this.post(`https://darius-bookings-CAP.cfapps.us10.hana.ondemand.com/bookings/Bookings`, oNewBooking)
                     .then(oResponse => {
                         this.getRouter().navTo("booking", { bookingId: oResponse.ID });
                     })
