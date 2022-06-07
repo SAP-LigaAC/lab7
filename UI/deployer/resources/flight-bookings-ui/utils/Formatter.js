@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/format/DateFormat"],function(t){return{formatDateTime:function(e,n){const a=new Date(e);const r=t.getDateInstance({pattern:n});return r.format(a)}}});

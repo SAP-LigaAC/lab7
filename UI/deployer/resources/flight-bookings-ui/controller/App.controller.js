@@ -1,0 +1,1 @@
+sap.ui.define(["flight/bookings/ui/controller/BaseController"],function(o,e){"use strict";return o.extend("flight.bookings.ui.controller.App",{})});

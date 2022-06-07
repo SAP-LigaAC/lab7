@@ -1,0 +1,65 @@
+<mvc:View controllerName="flight.bookings.ui.controller.Bookings"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:uxap="sap.uxap">
+	<uxap:ObjectPageLayout id="idBookingsPage" upperCaseAnchorBar="false" busyIndicatorDelay="0">
+		<uxap:headerTitle>
+			<uxap:ObjectPageDynamicHeaderTitle>
+				<uxap:expandedHeading>
+					<Title text="{i18n>appTitle}" />
+				</uxap:expandedHeading>
+				<uxap:actions>
+					<Button press="onPressBookNow" text="{i18n>bookNowButton}" type="Emphasized"/>
+				</uxap:actions>
+			</uxap:ObjectPageDynamicHeaderTitle>
+		</uxap:headerTitle>
+		<uxap:sections>
+			<uxap:ObjectPageSection titleUppercase="false" title="{i18n>bookingsSectionTitle}">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection>
+						<uxap:blocks>
+							<Table id="idBookingsTable" items="{path: 'bookingsModel>/bookings'}" itemPress="onPressTableItem">
+								<columns>
+									<Column width="10em">
+										<Text text="{i18n>idTableColumn}" />
+									</Column>
+									<Column width="10em">
+										<Text text="{i18n>bookingStatusTableColumn}" />
+									</Column>
+									<Column>
+										<Text text="{i18n>bookingDateTableColumn}" />
+									</Column>
+									<Column>
+										<Text text="{i18n>flightDateTableColumn}" />
+									</Column>
+									<Column>
+										<Text text="{i18n>flightDestinationTableColumn}" />
+									</Column>
+									<Column>
+										<Text text="{i18n>passengerFirstNameTableColumn}" />
+									</Column>
+									<Column>
+										<Text text="{i18n>passengerLastNameTableColumn}" />
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem vAlign="Middle" type="Navigation">
+										<cells>
+											<Text text="{bookingsModel>ID}" />
+											<Text text="{bookingsModel>BookingStatus}" />
+											<Text text="{parts: [{path: 'bookingsModel>BookingDate'}, {value: 'MMM d, yyyy'}], formatter: '.Formatter.formatDateTime'}" />
+											<Text text="{parts: [{path: 'bookingsModel>FlightDate'}, {value: 'MMM d, yyyy'}], formatter: '.Formatter.formatDateTime'}" />
+											<Text text="{bookingsModel>FlightDestination}" />
+											<Text text="{bookingsModel>FirstName}" />
+											<Text text="{bookingsModel>LastName}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+		</uxap:sections>
+	</uxap:ObjectPageLayout>
+</mvc:View>

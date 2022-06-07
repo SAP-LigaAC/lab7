@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <link type="image/x-icon" href="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png"
+        rel="shortcut icon">
+    <title>Flight Bookings</title>
+
+    <script id="sap-ui-bootstrap" src="https://sapui5.hana.ondemand.com/1.97.0/resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_fiori_3" data-sap-ui-resourceroots='{
+            "flight.bookings.ui": "../"
+        }' data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true" data-sap-ui-frameOptions="trusted">
+        </script>
+
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.require([
+                "sap/ui/core/ComponentContainer"
+            ], function (ComponentContainer) {
+                new ComponentContainer({
+                    name: "flight.bookings.ui",
+                    height: "100%",
+                    settings: {
+                        id: "flight.bookings.ui"
+                    }
+                }).placeAt("content");
+            });
+        });
+    </script>
+</head>
+
+<body class="sapUiBody" id="content" />
+
+</html>

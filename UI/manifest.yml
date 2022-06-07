@@ -1,0 +1,9 @@
+applications:
+  - name: darius-UI
+    host: darius-UI
+    buildpack: staticfile_buildpack
+    disk_quota: 125M
+    timeout: 180
+    memory: 125M
+    instances: 1
+    path: src

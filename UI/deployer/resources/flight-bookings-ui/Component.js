@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/UIComponent"],function(t){"use strict";return t.extend("flight.bookings.ui.Component",{metadata:{manifest:"json"},init:function(){t.prototype.init.apply(this,arguments);this.getRouter().initialize()}})});

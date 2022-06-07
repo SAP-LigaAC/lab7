@@ -1,0 +1,50 @@
+<mvc:View controllerName="flight.bookings.ui.controller.Booking"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page id="idBookingPage" title="{ parts: [{ path: 'i18n>bookingPageTitle'}, {path: 'bookingModel>/booking/ID'}] }" titleAlignment="Center" busyIndicatorDelay="0" showNavButton="true" navButtonPress="onNavHomePress">
+        <content>
+            <HBox class="sapUiSmallMarginBegin">
+                <VBox class="sapUiSmallMarginEnd" width="50%">
+                    <f:SimpleForm layout="ResponsiveGridLayout" columnsXL="1" columnsL="1" columnsM="1" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="1" emptySpanXL="3" emptySpanL="3" emptySpanM="3" emptySpanS="1">
+                        <f:content>
+                            <core:Title text="{i18n>bookingSectionTitle}"/>
+                            <Label text="{i18n>idLabel}"/>
+                            <Text text="{bookingModel>/booking/ID}"/>
+                            <Label text="{i18n>flightDateLabel}"/>
+                            <Text text="{bookingModel>/booking/flightDate}"/>
+                            <Label text="{i18n>flightDestinationLabel}"/>
+                            <Text text="{bookingModel>/booking/flightDestination}"/>
+                            <core:Title text="{i18n>passengerSectionTitle}"/>
+                            <Label text="{i18n>firstNameLabel}"/>
+                            <Text text="{bookingModel>/booking/firstName}"/>
+                            <Label text="{i18n>lastNameLabel}"/>
+                            <Text text="{bookingModel>/booking/lastName}"/>
+                            <Label text="{i18n>emailAddressLabel}" visible="{= !${localModel>/isInEditMode}}"/>
+                            <Text text="{bookingModel>/booking/emailAddress}" visible="{= !${localModel>/isInEditMode}}"/>
+                            <!-- EditMode -->
+                            <Label text="{i18n>emailAddressLabel}"  visible="{localModel>/isInEditMode}" class="sapUiTinyMarginTop"/>
+                            <Input value="{bookingModel>/booking/emailAddress}" visible="{localModel>/isInEditMode}" class="sapUiSizeCompact"  valueState="{valueStateModel>/emailError}"/>
+                         
+                            <Label text="{i18n>phoneNumberLabel}"/>
+                            <Text text="{bookingModel>/booking/phoneNumber}" visible="{= !${localModel>/isInEditMode}}"/>
+                            <!-- Edit Mode -->
+                            <Label text="{i18n>phoneNumberLabel}" visible="{localModel>/isInEditMode}" class="sapUiTinyMarginTop"/>
+                            <Input value="{bookingModel>/booking/phoneNumber}" visible="{localModel>/isInEditMode}" class="sapUiSizeCompact"  valueState="{valueStateModel>/phoneError}"/>
+                        </f:content>
+                    </f:SimpleForm>
+                </VBox>
+            </HBox>
+        </content>
+          <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="Edit" type="Emphasized" press="onEditPress" visible="{= !${localModel>/isInEditMode}}"/>
+                <Button text="Cancel Edit" press="onCancelEditPress" visible="{localModel>/isInEditMode}" class="sapUiSmallMarginEnd"/>
+                <Button text="Save" type="Emphasized" visible="{localModel>/isInEditMode}" press="onEditDonePress"/>
+                <Button text="Delete" type="Reject" press="onDeletePress" class="sapUiSmallMarginBegin sapUiSmallMarginEnd"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
